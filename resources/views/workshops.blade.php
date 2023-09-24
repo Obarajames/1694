@@ -1,4 +1,7 @@
 @extends('layout')
 @section('content')
-    <h1 class="bg-blue-700">this is my workshop page</h1>
+
+<div class="mt-9">
+  @livewire('navbar')
+</div>
 @endsection

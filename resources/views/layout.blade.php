@@ -18,11 +18,12 @@
             <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
                 {{--render our views--}}
                 @yield("content")
-                <i class="fas fa-moon moon cursor-pointer"></i> 
-                <i class="fas fa-sun sun cursor-pointer"></i>
-            </div>
-        </div>
 
+                
+            </div>
+             
+        </div>
+       
     </div>
     <script src="{{ mix('js/custom.js') }}"></script>
 

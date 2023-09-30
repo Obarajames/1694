@@ -7,7 +7,16 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        'custom': '30px',  
+        'larger': '1.5rem', 
+        'small': "16px",
+        'smaller': "14px",
+        "middle": "20px"
+      },
+    },
+   
   },
   plugins: [],
 }

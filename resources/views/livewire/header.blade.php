@@ -1,7 +1,7 @@
 <header class="pl-20 pt-30 pr-20">
 <img src="{{ asset('images/apple-touch-icon.png') }}" alt="Your Image" class="rounded-full w-14 cursor-pointer">
 <div class="mt-10 ">
-    <h1 class=" max-w-4xl text-4xl font-semibold" >
+    <h1 class=" max-w-4xl text-4xl  font-semibold" >
     CIP 1694 - An On-Chain <br>Decentralized Governance <br>Mechanism for Voltaire
     </h1>
 </div>
@@ -14,5 +14,5 @@
         <b>governance actions, votes.</b>
 </p>
 <br>
-<a href="https://github.com/cardano-foundation/CIPs/pull/380" target="_blank"><i class="fab fa-github text-lg text-gray-600"></i></a>
+<a href="https://github.com/cardano-foundation/CIPs/pull/380" target="_blank"><i class="fab fa-github text-xl text-gray-400"></i></a>
 </header>

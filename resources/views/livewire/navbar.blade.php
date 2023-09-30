@@ -1,40 +1,35 @@
-<nav class="mt-6 flex items-center justify-between">
-    <div ml-10>
-
-    </div>
-    <div class="shadow-lg shadow-red-500 md:shadow-xl text-blue-500 border border-gray-300 rounded-full p-3">
-    <ul class="-my-2 text-base divide-y divide-zinc-100 text-zinc-800 flex dark:divide-zinc-100/5 dark:text-zinc-300">
-        <li>
-            <a href="/"  class="text-aqua @if(request()->is('/')) text-red-500 @endif">Home</a>
-        </li>
-        <li class="pl-7">
-            <a href="/workshops" class=" @if(request()->is('workshops')) text-red-500 @endif">Workshops</a>
-        </li>
-    </ul>
-</div>
-
-
-
-    <div class="flex space-x-2">
-        <i class="fas fa-moon moon cursor-pointer" id="moonIcon"></i>
-        <i class="fas fa-sun sun cursor-pointer hidden md:visible" id="sunIcon"></i>
-    </div>
-
+<nav class="mt-6 flex items-center justify-evenly ">
     
+
+    <div class="shadow-lg shadow-red-500 md:shadow-xl text-blue-500 border border-gray-300 rounded-full p-3 ml-10">
+        <ul class="-my-2 text-base  divide-zinc-100 text-zinc-800 flex ">
+            <li>
+                <a href="/" class="text-aqua @if(request()->is('/')) text-red-500 @endif">Home</a>
+            </li>
+            <li class="pl-7">
+                <a href="/workshops" class=" @if(request()->is('workshops')) text-red-500 @else text-black @endif">Workshops</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mr-20 rounded-full p-2  shadow-md  ">
+        <img src="{{asset('images/images/logos/moon.png')}}" alt="Image 12" class="w-6 h-6 cursor-pointer rounded-3xl" onclick="toggleDarkMode()" id="icon">
+    </div>
 </nav>
 
 
 <script>
-    const moonIcon = document.getElementById('moonIcon');
-    const sunIcon = document.getElementById('sunIcon');
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.getElementById("semi-body").classList.toggle("semidark-mode");
+        document.getElementById("darkmode-table").classList.toggle("darkmode-table")
 
-    moonIcon.addEventListener('click', () => {
-        moonIcon.style.display = 'none';
-        sunIcon.style.display = 'inline-block';
-    });
+        let icon = document.getElementById("icon")
 
-    sunIcon.addEventListener('click', () => {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'inline-block';
-    });
+        if (document.body.classList.contains("dark-mode")) {
+            icon.src = " {{asset('images/images/logos/sun.png')}}";
+        } else {
+            icon.src = "{{asset('images/images/logos/moon.png')}}"
+        }
+
+    }
 </script>
